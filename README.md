@@ -92,3 +92,4 @@ Las siguientes graficas representan como se ve este metodo aplicandolo sobre la 
 
 
 ![montecarlo2-ezgif com-loop-count](https://github.com/user-attachments/assets/01740c96-146e-4dfd-b809-9f4a475ab5a0)
+![montecarlo1-ezgif com-loop-count](https://github.com/user-attachments/assets/a84083bd-de10-4a5f-bf02-bdfc45eaee00)
