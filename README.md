@@ -104,14 +104,14 @@ Las siguientes gráficas muestran cómo se ve este método aplicado a la funció
 ---
 #### Conclusión
 
-A lo largo de este proyecto, exploramos dos métodos distintos para aproximar la función de distribución normal estándar \(\phi(x)\): la expansión en serie de Taylor y el método de Montecarlo.
+A lo largo de este proyecto, exploramos dos métodos distintos para aproximar la función de distribución normal estándar $\phi(x)$: la expansión en serie de Taylor y el método de Montecarlo.
 
-La **expansión de Taylor** demostró ser una forma precisa y eficiente para calcular \(\phi(x)\), especialmente cerca del origen. Sin embargo, su precisión disminuye en las **colas de la distribución**, donde se requieren muchos más términos para lograr una buena aproximación.
+La **expansión de Taylor** demostró ser una forma precisa y eficiente para calcular $\phi(x)$, especialmente cerca del origen. Sin embargo, su precisión disminuye en las **colas de la distribución**, donde se requieren muchos más términos para lograr una buena aproximación.
 
 Por otro lado, el **método de Montecarlo** ofrece una alternativa más general, basada en simulaciones aleatorias. Aunque es conceptualmente sencillo y muy versátil, **su precisión depende en gran medida del número de simulaciones**. Esto puede implicar un alto costo computacional si se busca una aproximación muy precisa.
 
 En resumen:
 - La expansión de Taylor es más **eficiente y precisa** para valores cercanos a cero.
-- El método de Montecarlo es más **flexible y generalizable**, pero menos eficiente para funciones suaves como \(\phi(x)\).
+- El método de Montecarlo es más **flexible y generalizable**, pero menos eficiente para funciones suaves como $\phi(x)$.
 
 Este ejercicio ilustra cómo distintas herramientas numéricas pueden ser útiles en diferentes contextos, y resalta la importancia de elegir el método adecuado según las características del problema.
