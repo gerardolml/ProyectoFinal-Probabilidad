@@ -1,10 +1,12 @@
 # Proyecto Final — Probabilidad 📊
 
-Este proyecto explora el desarrollo de la función de distribución normal estándar $\( \phi(x) \)$, su forma integral y su aproximación mediante el desarrollo en serie de Taylor de su núcleo exponencial.
+Este proyecto explora formas de aproximar el calculo de distribución normal estándar $\phi(x)$ Los metodos con los que estarmos trabajando para este calculo es usando la expansion de taylor centrada en 0 y el metodo Montecarlo
 
----
 
-## Distribución Normal Estándar
+
+## Calculo por expansion de taylor
+
+### Distribución Normal Estándar
 
 La función de distribución acumulada para la variable aleatoria $\( X \sim \mathcal{N}(0,1) \)$ se define como:
 
@@ -12,40 +14,32 @@ La función de distribución acumulada para la variable aleatoria $\( X \sim \ma
   <img src="https://latex.codecogs.com/svg.image?\phi(x)=\int_{-\infty}^x\frac{1}{\sqrt{2\pi}}e^{-\frac{t^2}{2}}\,dt" />
 </p>
 
----
+Ahora si $x\geq 0$
+<p align="center">
+  <img src="https://latex.codecogs.com/svg.image?\phi(x)=\frac{1}{2}+\int_{0}^x\frac{1}{\sqrt{2\pi}}e^{-\frac{t^2}{2}}\,dt" />
+</p>
 
-## Desarrollo de Taylor de \( e^{-\frac{x^2}{2}} \)
-
-La función dentro de la integral no tiene una antiderivada elemental. Sin embargo, podemos aproximarla utilizando una serie de Taylor centrada en 0:
-
+Tambien sabemos que la funcion $e^{-\frac{x^2}{2}}$ se puede expresar de la siguiente manera:
 <p align="center">
   <img src="https://latex.codecogs.com/svg.image?e^{-\frac{x^2}{2}}=\sum_{n=0}^\infty\frac{(-1)^n}{2^n\,n!}x^{2n}" />
 </p>
 
-Desarrollando los primeros términos:
-
+Sustituyendo los $e^{-\frac{t^2}{2}}$ tenemos el siguiente desarrollo y tomando solamente la parte donde $x\geq 0$
 <p align="center">
-  <img src="https://latex.codecogs.com/svg.image?e^{-\frac{x^2}{2}}\approx1-\frac{x^2}{2}+\frac{x^4}{8}-\frac{x^6}{48}+\cdots" />
+  <img src="https://latex.codecogs.com/svg.image?\phi(x)=\frac{1}{2}+\int_{0}^x\frac{1}{\sqrt{2\pi}}\sum_{n=0}^\infty\frac{(-1)^n}{2^n\,n!}t^{2n}\,dt" />
 </p>
 
----
-
-## Aplicaciones
-
-Usando esta expansión, podemos aproximar numéricamente la función \( \phi(x) \) integrando término a término:
-
 <p align="center">
-  <img src="https://latex.codecogs.com/svg.image?\phi(x)\approx\int_{-\infty}^x\frac{1}{\sqrt{2\pi}}\left(1-\frac{t^2}{2}+\frac{t^4}{8}-\cdots\right)\,dt" />
+  <img src="https://latex.codecogs.com/svg.image?\phi(x)=\frac{1}{2}+\frac{1}{\sqrt{2\pi}}\sum_{n=0}^\infty\frac{(-1)^n}{2^n\,n!}\int_{0}^xt^{2n}\,dt" />
 </p>
 
----
+Con este desarrollo tenemos una integral que es mas facil de resolver que la expresion original. por lo que tenemos la siente expresion 
 
-## Conclusión
+<p align="center">
+  <img src="https://latex.codecogs.com/svg.image?\phi(x)=\frac{1}{2}+\frac{1}{\sqrt{2\pi}}\sum_{n=0}^\infty\frac{(-1)^nx^{2n+1}}{2^n\,n!(2n+1)}" />
+</p>
 
-Esta aproximación permite obtener valores de la función de distribución normal sin usar tablas, y es útil en simulaciones o contextos donde no se dispone de funciones especiales predefinidas.
-
----
-
-## Créditos
-
-Este trabajo fue realizado por **Luis Ayala** como parte del proyecto final de la materia de Probabilidad.
+Ahora esta formula solo funciona si si $x\geq 0$, la solucion si $x < 0$ 
+<p align="center">
+  <img src="https://latex.codecogs.com/svg.image?\phi(-x)=1-\phi(x)" />
+</p>
