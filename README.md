@@ -43,3 +43,9 @@ Ahora esta formula solo funciona si si $x\geq 0$, la solucion si $x < 0$
 <p align="center">
   <img src="https://latex.codecogs.com/svg.image?\phi(-x)=1-\phi(x)" />
 </p>
+
+### Implementacion 
+Se creo una implementacion en python y C donde se aplica la formula desarroya y esta funcion va a calcualar el valor de $\phi(x)$ Aqui se muestra graficamente como funciona la aproximacion de la funcion:
+
+![aproximacion_normal](https://github.com/user-attachments/assets/857cf0c9-b596-431a-baa5-456c110dff3c)
+
