@@ -51,7 +51,7 @@ Esta fórmula solo funciona cuando $\(x \geq 0\)$. Para $\(x < 0\)$, se puede us
 
 ### Implementación
 
-Se creó una implementación en Python y C donde se aplica la fórmula desarrollada para calcular el valor de \(\phi(x)\).  
+Se creó una implementación en Python y C donde se aplica la fórmula desarrollada para calcular el valor de $\phi(x)$.  
 A continuación, se muestra gráficamente cómo funciona la aproximación:
 
 ![aproximacion_normal-ezgif com-loop-count](https://github.com/user-attachments/assets/57d11a80-5084-46fe-b9a5-56d4b955049a)
