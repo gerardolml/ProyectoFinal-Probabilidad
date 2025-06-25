@@ -3,7 +3,7 @@
 Este proyecto explora formas de aproximar el cálculo de la distribución normal estándar $\phi(x)$.  
 Los métodos que estaremos utilizando para este cálculo son la **expansión de Taylor centrada en 0** y el **método de Montecarlo**.
 
----
+
 
 ## Cálculo por expansión de Taylor
 
@@ -27,7 +27,7 @@ También sabemos que la función  $e^{-\frac{x^2}{2}}$  se puede expresar como:
   <img src="https://latex.codecogs.com/svg.image?e^{-\frac{x^2}{2}}=\sum_{n=0}^\infty\frac{(-1)^n}{2^n\,n!}x^{2n}" />
 </p>
 
-Sustituyendo $e^{-\frac{x^2}{2}}$  en la integral anterior, y considerando únicamente el caso donde \(x \geq 0\), tenemos:
+Sustituyendo $e^{-\frac{x^2}{2}}$  en la integral anterior, y considerando únicamente el caso donde $\(x \geq 0\)$, tenemos:
 
 <p align="center">
   <img src="https://latex.codecogs.com/svg.image?\phi(x)=\frac{1}{2}+\int_{0}^x\frac{1}{\sqrt{2\pi}}\sum_{n=0}^\infty\frac{(-1)^n}{2^n\,n!}t^{2n}\,dt" />
